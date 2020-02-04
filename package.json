@@ -1,0 +1,104 @@
+{
+  "name": "hotel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "build:dev": "set NODE_ENV=development && webpack --mode development",
+    "build": "set NODE_ENV=production && webpack --mode production",
+    "start": "set NODE_ENV=development && webpack-dev-server --mode development --hot --inline --open",
+    "server": "pm2 start ecosystem.config.js",
+    "lint:eslint": "eslint src/**/*.js",
+    "lint:stylelint": "stylelint src/**/*.js",
+    "lint": "yarn run lint:eslint && yarn run lint:stylelint",
+    "lint:fix": "eslint src/**/*.js --fix"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:salihkesepara/hotel.git"
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "statements": 50,
+        "branches": 50,
+        "functions": 50,
+        "lines": 50
+      }
+    }
+  },
+  "keywords": [
+    "Empty",
+    "React",
+    "App"
+  ],
+  "author": "Salih Kesepara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/salihkesepara/emptywebpackapp/issues"
+  },
+  "homepage": "https://gitlab.com/salihkesepara/emptywebpackapp#readme",
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@hot-loader/react-dom": "^16.8.6",
+    "babel-polyfill": "^6.26.0",
+    "bootstrap": "^4.3.1",
+    "history": "^4.10.1",
+    "immutable": "3.8.1",
+    "payment": "2.3.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.9",
+    "react-credit-cards": "0.7.0",
+    "react-date-picker": "^7.10.0",
+    "react-dom": "^16.8.6",
+    "react-hot-loader": "^4.12.8",
+    "react-infinite-scroll-component": "^5.0.4",
+    "react-infinite-scroller": "^1.2.4",
+    "react-radio-buttons": "^1.2.2",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "5.1.2",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.3",
+    "css-loader": "^3.0.0",
+    "csv-loader": "^3.0.2",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "eslint": "^6.0.1",
+    "eslint-loader": "^2.2.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-react-hooks": "^1.6.1",
+    "express": "^4.17.1",
+    "file-loader": "4.1.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "jasmine": "^3.5.0",
+    "jest": "^24.8.0",
+    "node-sass": "^4.12.0",
+    "prettier": "^1.18.2",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "stylelint": "^10.1.0",
+    "stylelint-config-standard": "^18.3.0",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2",
+    "xml-loader": "^1.2.1"
+  }
+}
